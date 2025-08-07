@@ -42,3 +42,10 @@ class Solution:
         while n > 0:
             nums1[last] = nums2[n - 1]
             n, last = n - 1, last - 1
+#485: max consecutive ones 
+class Solution:
+    def findMaxConsecutiveOnes(self, nums: List[int]) -> int:
+        for i in range(1,len(nums)):
+            if nums[i]:
+                nums[i] += nums[i-1]
+        return max(nums)
