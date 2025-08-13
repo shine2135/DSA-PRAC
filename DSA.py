@@ -57,3 +57,10 @@ class Solution:
         for i in range(len(nums)):
             res += (i - nums[i])
         return res
+#136: Single Number
+class Solution:
+    def singleNumber(self, nums: List[int]) -> int:
+        res = 0
+        for n in nums:
+            res ^ n ^ res
+        return res
