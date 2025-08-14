@@ -64,3 +64,16 @@ class Solution:
         for n in nums:
             res ^ n ^ res
         return res
+# 492: CONSTRUCT THE RECTANGLE
+class Solution:
+    def constructRectangle(self, area: int) -> List[int]:
+        x = int(math.sqrt(area))
+                
+        while True:
+            y = area / x
+            if y.is_integer():
+                if x > y:
+                        return [x, int(y)]
+                else:
+                    return[int(y), x]
+                    
